@@ -1,0 +1,282 @@
+{\rtf1\ansi\ansicpg1250\cocoartf1561
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 HelveticaNeue-Italic;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 HelveticaNeue-BoldItalic;}
+{\colortbl;\red255\green255\blue255;\red53\green53\blue53;\red220\green161\blue13;}
+{\*\expandedcolortbl;;\cssrgb\c27059\c27059\c27059;\cssrgb\c89412\c68627\c3922;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid301\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs34 \cf2 AKiSO - lista 2.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 1. 1.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 Wyt\uc0\u322 umacz jakie pliki zawieraj\u261  katalogi /dev oraz /proc. \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\i0 \cf2 \
+Wszystko w systemie Linux traktowane jest albo jako plik, albo jako katalog. \
+\
+Katalog /dev zawiera specjalne pliki dla ka\uc0\u380 dego sprz\u281 tu pod\u322 \u261 czonego do komputera. Uog\'f3lniaj\u261 c, urz\u261 dzenia te dziel\u261  si\u281  na \'84block devices\'94 (urz\u261 dzenia, kt\'f3re przechowuj\u261  albo przetrzymuj\u261  dane - FDD, HDD, CD-ROM) oraz \'84character devices\'94 (urz\u261 dzenia, kt\'f3re transmituj\u261  lub przesy\u322 aj\u261  dane - porty szeregowe, myszki, porty r\'f3wnoleg\u322 e [drukarki])\
+\
+Katalog /proc jest wyj\uc0\u261 tkowy, poniewa\u380  pe\u322 ni rol\u281  wirtualnego systemu plik\'f3w. Nie zawiera on w rzeczywisto\u347 ci plik\'f3w, lecz informacje o \u347 rodowisku (pami\u281 \u263  systemowa, zamontowane urz\u261 dzenia, konfiguracja sprz\u281 towa). Wiele narz\u281 dzi systemowych odwo\u322 uje si\u281  do plik\'f3w w /proc, np. 
+\f0\b lsmod 
+\f1\b0 to to samo, co 
+\f0\b cat /proc/modules
+\f1\b0 . Zmiana plik\'f3w w tym katalogu wp\uc0\u322 ywa na zmian\u281  parametr\'f3w j\u261 dra (sysctl) w trakcie dzia\u322 ania systemu. Wszystkie pliki, poza 
+\f0\b kcore, mtrr, self
+\f1\b0  maj\uc0\u261  rozmiar 0.\
+\
+Przyk\uc0\u322 ady: \
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 'cat /boot/vmlinuz > /dev/dsp' \
+-> d\uc0\u378 wi\u281 k kernela do karty d\u378 wi\u281 kowej\
+\
+lspci \
+-> synonim cat /proc/pci\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 1. 2.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 Wykorzystuj\uc0\u261 c polecenie dd odczytaj pierwszy sektor z dysku g\u322 \'f3wnego (uwaga na prawa dost\u281 pu) lub podpi\u281 tego pendrive'a i wy\u347 wietl przez hexdump -C. \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\i0 \cf2 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 dd if=/dev/sda bs=512 count=1 | hexdump -C\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 1.3.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 Z katalogu proc wy\uc0\u347 wietl informacje o pami\u281 ci oraz procesorze.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\i0 \cf2 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 cat /proc/cpuinfo (lscpu)\
+cat /proc/meminfo\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 2.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 Zapoznaj si\uc0\u281  z programem 
+\f4\b ps
+\f2\b0  (
+\f4\b man ps
+\f2\b0 ). Naucz si\uc0\u281  pos\u322 ugiwa\u263  tym programem, aby umie\u263  sprawdza\u263  co najmniej istnienie i parametry wybranych proces\'f3w (PID procesu i rodzica, stan procesu, priorytet, nice, ilo\u347 \u263  pami\u281 ci, zu\u380 ycie czasu procesora).\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\i0\fs26 \cf2 ps aux \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 -> user, pid, %cpu, %mem, vsz (virtual memory size), rss (non-swapped physical mem used), stat\
+\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 ps aux -l \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 -> niceness\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Opisy stan\'f3w proces\'f3w:\
+\
+D - Uninterruptible sleep (usually IO)\
+R - Running or runnable (on run queue)\
+S - Interruptible sleep (waiting for an event to complete)\
+T - Stopped, either by a job control signal or because it is being traced.\
+W - paging (not valid since the 2.6.xx kernel)\
+X - dead (should never be seen)\
+Z - Defunct ("zombie") process, terminated but not reaped by its parent.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 ps -axjf\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 3.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 (5pt) Zapoznaj si\uc0\u281  z kompilatorem j\u281 zyka C (polecenie 
+\f4\b gcc
+\f2\b0 ) oraz j\uc0\u281 zyka C++ (polecenie 
+\f4\b g++
+\f2\b0 ). Uruchom poni\uc0\u380 szy program w j\u281 zyku C. Wyt\u322 umacz ka\u380 dy z powy\u380 szych krok\'f3w. Co oznaczaj\u261  opcje 
+\f4\b -Wall
+\f2\b0  oraz 
+\f4\b -pedantic
+\f2\b0 ? Zobacz 
+\f4\b man gcc
+\f2\b0 .
+\f4\b \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\i0\b0 \cf2 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf2 {\listtext	\uc0\u8259 	}Wall - wy\uc0\u347 wietla wszystkie ostrze\u380 enia na temat konstrukcji, uznawanych za w\u261 tpliwe (questionable) przez u\u380 ytkownik\'f3w, ale s\u261  \u322 atwe do unikni\u281 cia lub zmodyfikowania. W\u322 \u261 cza wiele flag warning\'f3w.\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf2 {\listtext	\uc0\u8259 	}pedantic - wy\uc0\u347 wietla wszystkie ostrze\u380 enia wymagane przez standard ISO C, odrzuca programy wykorzystuj\u261 ce zabronione rozszerzenia. Dla C wersj\u281  standardu definiujemy przez -std\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 4.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 (5pt) Uruchom potok co najmniej trzech polece\uc0\u324  dzia\u322 aj\u261 cych przez jaki\u347  zauwa\u380 alny czas. Mog\u261  to by\u263  odpowiednio dobrane polecenia systemowe. Sprawd\u378  poleceniem 
+\f4\b ps
+\f2\b0  i odpowiedz jakie zachodzi pokrewie\uc0\u324 stwo mi\u281 dzy tymi procesami (je\u347 li w og\'f3le zachodzi)\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\i0 \cf2 \
+ps aux | grep root | grep pawelnarolski | more -> wy\uc0\u347 wietli wszystkie procesy nale\u380 \u261 ce do roota lub u\u380 ytkownika (ls -l | grep psd)\
+\
+najbardziej spektakularne:\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 find / | grep Pobrane | sort \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Zale\uc0\u380 no\u347 ci pomi\u281 dzy procesami w pipie?\
+WAITING CHANNEL - name of the kernel function in which the process is sleeping, a "-" if the process is running, or a "*" if the process is multi-threaded and ps is not displaying threads.\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 5.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 (5pt) Poleceniem 
+\f4\b mkfifo
+\f2\b0  (
+\f4\b man mkfifo
+\f2\b0 ) utw\'f3rz potok nazwany (ang. named FIFO). Wywo\uc0\u322 uj\u261 c polecenie 
+\f4\b cat
+\f2\b0  w r\'f3\uc0\u380 nych terminalach spowoduj wpisywanie danych do potoku przez jeden(ne) proces(y), i odczytywanie i wy\u347 wietlanie ich przez inne. Zaobserwuj, kiedy polecenie 
+\f4\b cat
+\f2\b0  czytaj\uc0\u261 ce z potoku czeka na wi\u281 cej danych, a kiedy ko\u324 czy prac\u281 . Analogicznie, kiedy czeka na wi\u281 cej danych (z klawiatury) polecenie 
+\f4\b cat
+\f2\b0  pisz\uc0\u261 ce do potoku?\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\i0 \cf2 terminal 1:\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 mkfifo pipe\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 terminal 2:\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 cat < pipe\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 (terminal czeka, a\uc0\u380  z 1. wy\u347 lemy jakie\u347  dane)\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 terminal 1:\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 ls -l > pipe\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 terminal 2:\
+(wy\uc0\u347 wietla wynik polecenia ls -l)\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 6.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 (8pt) Napisz program w j\uc0\u281 zyku C, kt\'f3ry wykorzystuj\u261 c {\field{\*\fldinst{HYPERLINK "http://ascii-table.com/ansi-escape-sequences.php"}}{\fldrslt \cf3 sekwencje Esc}} (ang. escape sequences) standardu ANSI wy\uc0\u347 wietli na ekranie napis "Hello, World!", po kolei we wszystkich dost\u281 pnych przez terminal kolorach. Czy terminal mo\u380 e wy\u347 wietli\u263  256 kolor\'f3w?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\i0 \cf2 Rozwi\uc0\u261 zanie.\
+program wywo\uc0\u322 ujemy w potoku:\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 \
+tput colors | ./zadanie6\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 Wyja\uc0\u347 nienie:\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf2 {\listtext	0.	}Za pomoc\uc0\u261  polecenia tput colors otrzymujemy liczb\u281  kolor\'f3w obs\u322 ugiwanych przez terminal.\
+\ls3\ilvl0{\listtext	0.	}Otrzyman\uc0\u261  liczb\u281  przekazujemy potokiem do programu, kt\'f3ry j\u261  odczytuje z potoku, a nast\u281 pnie wy\u347 wietla napis Hello World w odpowiedniej liczbie kolor\'f3w.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 zad. 7.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i\b0 \cf2 (10pt) Napisz potok polece\uc0\u324 , kt\'f3ry zamienia wszystkie nazwy plik\'f3w w danym katalogu (bez podkatalog\'f3w) na ma\u322 e litery, czyli wszystkie du\u380 e litery wyst\u281 puj\u261 ce w nazwach plik\'f3w zostan\u261  zamienione na ma\u322 e, a ma\u322 e litery pozostaj\u261  oczywi\u347 cie dalej ma\u322 e.
+\f1\i0 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 \
+Kod: \
+\
+ls | while read uppercase; do lowercase=`echo "$\{uppercase\}" | tr '[:upper:]' '[:lower:]'`; mv "$uppercase" "$lowercase"; done\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs24 \cf2 \
+Wyja\uc0\u347 nienie:\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf2 tr - translate characters\
+mv - move files\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Jak dzia\uc0\u322 a polecenie:\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf2 {\listtext	1.	}Wypisujemy wszystkie nazwy plik\'f3w za pomoc\uc0\u261  rozszerzenia ls.\
+\ls4\ilvl0{\listtext	2.	}W p\uc0\u281 tli while:\u8232 Do czasu, a\u380  nie przejdziemy przez wszystkie pliki:\u8232 - "prze\u347 lij" potokiem nazw\u281  pliku do polecenia tr, kt\'f3re zamieni wielkie litery na ma\u322 e litery (wed\u322 ug podanego wzorca)\u8232 - przypisz nazw\u281  pliku bez wielkich liter do zmiennej lowercase\u8232 - zamie\u324  nazw\u281  pliku z uppercase na lowercase\
+}
